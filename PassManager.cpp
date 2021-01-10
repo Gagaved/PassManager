@@ -3,17 +3,18 @@
 std::string config_way = "./config.cfg";
 int main(int argc, char* argv[]) {
 	if (argc != 1) {
-		if (argv[1] == "--help") {
+		if (std::string(argv[1]) == std::string("--help")) {
 			help();
 			return 0;
 		}
-		else if (argv[1] == "--config") {
-			if (argc >= 3) {
+		else if (std::string(argv[1]) == std::string("--config")) {
+			if (argc >= 2) {
 				config_way = argv[2]; //указываем конфиг
 			}
 		}
 		else {
 			std::cout << "error: unknown parameter! \n";
+			std::cout << argv[1] << '\n';
 			return 1;
 		}
 	}
@@ -59,10 +60,7 @@ int main(int argc, char* argv[]) {
 		base.clear();
 	} else {
 		std::string recive_pass;
-
 		std::cout << "Enter the password or enter 'q' for quit: \n";
-		
-		//std::cin >> recive_pass;
 		hidden_input_pass(recive_pass);
 
 		while (true)  // АВТОРИЗАЦИЯ
