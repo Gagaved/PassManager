@@ -50,10 +50,6 @@ bool pars_command(std::string command, data& base)
 	else if (command == "del") {
 		std::string site;
 		std::cin >> site;
-		/*if (site == "") {
-			std::cout << "incorrect input\n"
-				return false;
-		}*/
 		del(site, base);
 		return false;
 	}

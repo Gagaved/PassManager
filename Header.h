@@ -20,6 +20,3 @@ bool pars_command(std::string command, data& base);
 void hidden_input_pass(std::string& recive_pass);
 void save(std::string passwordsway, data& base);
 void read_data(data& base, std::string passwordsWay, std::string pass);
-//unsigned long long hash(std::string password);//считает хеш-функцию по поролю
-//std::vector<char> hasher(unsigned long long  hash, std::string str_data); //Получает хеш и строку которую нужно захешировать
-//void de_hasher(unsigned long long hash, std::string path, std::vector<char>& str); //Получает хеш и строку "путь" до файла который нужно расхешировать
